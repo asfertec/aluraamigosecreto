@@ -1,62 +1,38 @@
-📝 Amigo Secreto 
-#Descripción del Proyecto
+# 🎉 Amigo Secreto 
 
-Este proyecto es una aplicación web sencilla creada con JavaScript, HTML y CSS que permite al usuario agregar nombres a una lista, visualizarlos, realizar un sorteo aleatorio y reiniciar los datos. Es ideal para dinámicas de grupo, sorteos, rifas o cualquier actividad que requiera seleccionar un nombre de manera aleatoria.
+Este es un challenge  en JavaScript que permite gestionar una lista de nombres y realizar un sorteo aleatorio entre los nombres ingresados.
 
-# ⚙️ ¿Cómo funciona el código?
-1. Agregar nombres a la lista
-La función incluirNombre() se encarga de capturar el valor ingresado en un campo de texto (input) identificado como "nombreInput". Si el campo está vacío, se muestra un mensaje de error. En caso contrario:
+## 🚀 Características
 
-El nombre se añade al arreglo listaNombres.
+- Añadir nombres .
+- Visualizar la lista en pantalla.
+- Seleccionar un nombre de amigo aleatorio entre los registrados.
+- Mostrar resultados o mensajes de advertencia cuando no se ingresa ningun nombre.
+- Reiniciar el sorteo en cualquier momento.
 
-Se limpia el campo de entrada.
+## 📋 Descripción Técnica
 
-Se actualiza la lista visible en pantalla mediante la función actualizarLista().
+Este proyecto está construido con **JavaScript ** . A continuación, se detallan sus principales funcionalidades:
 
-Se limpia cualquier mensaje anterior con mostrarMensaje("").
+### ➕ Incluir nombres
+Permite agregar un nombre mediante un `input` de texto. Si el campo está vacío, se muestra un mensaje pidiendo que se ingrese un nombre válido. Los nombres válidos se agregan a un arreglo `listaNombres`, que representa los participantes.
 
-2. Visualizar la lista de nombres
-La función actualizarLista():
+### 📄 Mostrar lista
+La función `actualizarLista()` recorre el arreglo `listaNombres` y actualiza una lista HTML (`<ul>` o `<ol>`) con todos los elementos añadidos. Limpia la lista anterior para evitar duplicaciones.
 
-Limpia el contenido actual de la lista en la interfaz (elemento con ID listaNombres).
+### 🎲 Selección aleatoria
+La función `seleccionarAleatorio()` elige un nombre aleatorio del arreglo, siempre que haya al menos dos participantes. El nombre elegido se muestra en pantalla usando `mostrarMensaje()`.
 
-Recorre el arreglo listaNombres y agrega cada nombre como un elemento <li> dentro de la lista HTML.
+### ❌ Reiniciar lista
+La función `reiniciarSorteo()` permite borrar toda la lista y reiniciar el sistema, útil para comenzar un nuevo sorteo.
 
-De esta forma, se presenta visualmente una lista actualizada de los nombres ingresados.
+### 🔔 Mensajes de resultado
+`mostrarMensaje()` es utilizada para mostrar resultados o advertencias en una sección de salida, como "Ingrese al menos dos nombres".
 
-3. Seleccionar un nombre al azar
-La función seleccionarAleatorio():
+## 🧰 Tecnologías utilizadas
 
-Verifica que haya al menos dos nombres en la lista para poder hacer un sorteo.
+- HTML5
+- CSS
+- JavaScrip
 
-Genera un número aleatorio dentro del rango del arreglo.
-
-Obtiene el nombre correspondiente al índice aleatorio y lo muestra en la sección de resultados usando mostrarMensaje(nombreSeleccionado).
-
-Si hay menos de dos nombres, se muestra un mensaje indicando que se necesitan más participantes.
-
-4. Mostrar resultados o mensajes
-La función mostrarMensaje(mensaje):
-
-Se encarga de actualizar el contenido del contenedor HTML con ID mensajeResultado.
-
-Permite mostrar tanto el nombre sorteado como cualquier mensaje de error o notificación.
-
-5. Reiniciar la lista
-La función reiniciarSorteo():
-
-Limpia el contenido visible de la lista en pantalla.
-
-Borra cualquier mensaje mostrado.
-
-Vacía completamente el arreglo listaNombres, reiniciando el sistema para comenzar de nuevo.
-
-📦 Requisitos
-Este proyecto funciona directamente en el navegador. Solo necesitas un archivo HTML que tenga los elementos con los siguientes IDs:
-
-nombreInput (input de texto)
-
-listaNombres (lista donde se mostrarán los nombres)
-
-mensajeResultado (contenedor para mostrar mensajes o resultados)
 
