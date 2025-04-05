@@ -1,46 +1,62 @@
-# aluraamigosecreto
-#Este código implementa un sorteo de nombres, permitiendo agregar nombres a una lista, seleccionar un nombre aleatorio y reiniciar el sorteo.
+📝 Amigo Secreto 
+#Descripción del Proyecto
 
-# Proyecto: Amigo Secreto
+Este proyecto es una aplicación web sencilla creada con JavaScript, HTML y CSS que permite al usuario agregar nombres a una lista, visualizarlos, realizar un sorteo aleatorio y reiniciar los datos. Es ideal para dinámicas de grupo, sorteos, rifas o cualquier actividad que requiera seleccionar un nombre de manera aleatoria.
 
-Este es un proyecto simple hecho con HTML, CSS y JavaScript. La idea es poder agregar nombres a una lista y luego elegir uno al azar. 
+# ⚙️ ¿Cómo funciona el código?
+1. Agregar nombres a la lista
+La función incluirNombre() se encarga de capturar el valor ingresado en un campo de texto (input) identificado como "nombreInput". Si el campo está vacío, se muestra un mensaje de error. En caso contrario:
 
-# ¿Qué hace este proyecto?
+El nombre se añade al arreglo listaNombres.
 
-Agrega nombres a una lista.
+Se limpia el campo de entrada.
 
-Muestra todos los nombres que se van agregando.
+Se actualiza la lista visible en pantalla mediante la función actualizarLista().
 
-Selecciona un nombre al azar.
+Se limpia cualquier mensaje anterior con mostrarMensaje("").
 
-Puedes borrar todo y empezar de nuevo.
+2. Visualizar la lista de nombres
+La función actualizarLista():
 
-# ¿Cómo funciona?
+Limpia el contenido actual de la lista en la interfaz (elemento con ID listaNombres).
 
-Escribes un nombre en un cuadro de texto.
+Recorre el arreglo listaNombres y agrega cada nombre como un elemento <li> dentro de la lista HTML.
 
-Haces clic en el botón para agregarlo.
+De esta forma, se presenta visualmente una lista actualizada de los nombres ingresados.
 
-Todos los nombres aparecen en una lista.
+3. Seleccionar un nombre al azar
+La función seleccionarAleatorio():
 
-Cuando tengas al menos dos nombres, puedes hacer clic en el botón para elegir uno al azar.
+Verifica que haya al menos dos nombres en la lista para poder hacer un sorteo.
 
-También hay un botón para borrar la lista y empezar de nuevo.
+Genera un número aleatorio dentro del rango del arreglo.
 
-# Requisitos (muy básicos)
+Obtiene el nombre correspondiente al índice aleatorio y lo muestra en la sección de resultados usando mostrarMensaje(nombreSeleccionado).
 
-Para que funcione necesitas estos elementos en el HTML:
+Si hay menos de dos nombres, se muestra un mensaje indicando que se necesitan más participantes.
 
-Un input con id nombreInput para escribir los nombres.
+4. Mostrar resultados o mensajes
+La función mostrarMensaje(mensaje):
 
-# Una lista ( por ejemplo un  <ul> ) con id listaNombres para mostrar los nombres.
+Se encarga de actualizar el contenido del contenedor HTML con ID mensajeResultado.
 
-Un div con id mensajeResultado para mostrar el resultado del sorteo o los mensajes.
+Permite mostrar tanto el nombre sorteado como cualquier mensaje de error o notificación.
 
-# Lenguajes usados
+5. Reiniciar la lista
+La función reiniciarSorteo():
 
-HTML
+Limpia el contenido visible de la lista en pantalla.
 
-CSS (muy poquito)
+Borra cualquier mensaje mostrado.
 
-JavaScript puro
+Vacía completamente el arreglo listaNombres, reiniciando el sistema para comenzar de nuevo.
+
+📦 Requisitos
+Este proyecto funciona directamente en el navegador. Solo necesitas un archivo HTML que tenga los elementos con los siguientes IDs:
+
+nombreInput (input de texto)
+
+listaNombres (lista donde se mostrarán los nombres)
+
+mensajeResultado (contenedor para mostrar mensajes o resultados)
+
