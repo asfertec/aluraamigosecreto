@@ -33,7 +33,7 @@ Para que funcione necesitas estos elementos en el HTML:
 
 Un input con id nombreInput para escribir los nombres.
 
-Una lista (por ejemplo un <ul> ) con id listaNombres para mostrar los nombres.
+Una lista ( por ejemplo un <ul> ) con id listaNombres para mostrar los nombres.
 
 Un div con id mensajeResultado para mostrar el resultado del sorteo o los mensajes.
 
